@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlTag">
+<head>
+    <meta name="description" content="صمم موقعك الإلكتروني لعملك أو شركتك بأفضل الأسعار وباحترافية عالية. اطلب استشارتك المجانية الآن.">
+<meta name="keywords" content="تصميم مواقع, تطوير مواقع, متجر إلكتروني, صفحة هبوط, برمجيات, Web design">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">ابدأ موقعك الإلكتروني الآن</title>
+    <!-- ربط ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- زر تبديل اللغة في أعلى الصفحة -->
+<div class="lang-switcher">
+    <button id="langBtn" data-lang="en">English 🌐</button>
+</div>
+
+<div class="container">
+
+    <h1 id="mainHeading">صمّم موقعك الإلكتروني لعملك أو شركتك</h1>
+    <p id="subHeading">تميز بوجود رقمي واحترافي. املأ البيانات بالأسفل وسأتواصل معك مباشرة للاتفاق على التفاصيل والأسعار المناسبة لمشروعك.</p>
+
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="الاسم الكريم" required>
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        <input type="tel" id="tel" placeholder="رقم الجوال أو الواتساب" required>
+
+        <select required id="service">
+            <option value="" id="optDefault">ما هو نوع الموقع الذي تحتاجه؟</option>
+            <option value="موقع تعريفي لشركة أو مشروع" id="optCompany">موقع تعريفي لشركة أو نشاط تجاري</option>
+            <option value="متجر إلكتروني متكامل" id="optStore">متجر إلكتروني لبيع المنتجات</option>
+            <option value="صفحة هبوط (Landing Page)" id="optLanding">صفحة هبوط (Landing Page) لمنتج أو خدمة</option>
+            <option value="موقع شخصي / معرض أعمال" id="optPortfolio">موقع شخصي أو معرض أعمال (Portfolio)</option>
+            <option value="تعديل أو تطوير موقع حالي" id="optModify">تعديل أو تطوير موقعك الحالي</option>
+        </select>
+
+        <input type="date" required id="date" title="الموعد المفضل للتواصل">
+        
+        <!-- الحقل أصبح مطلوباً بناءً على طلبك السابق -->
+        <textarea placeholder="اكتب تفاصيل مشروعك بالكامل هنا (مطلوب)" id="more" required></textarea>
+
+        <div class="price-notice" id="priceNotice">
+            💡 *ملاحظة: الأسعار مرنة ويتم تحديدها والاتفاق عليها بما يتناسب مع حجم مشروعك وميزانيتك أثناء تواصلنا المباشر.*
+        </div>
+
+        <button type="submit" id="sub">طلب استشارة واتفاق مجاني</button>
+    </form>
+
+    <div class="success" id="success">
+        ✅ تم إرسال طلبك بنجاح! سأتواصل معك قريباً جداً لمناقشة التفاصيل والأسعار.
+    </div>
+
+</div>
+
+<!-- ربط ملف الجافاسكربت الخارجي -->
+<script type="module" src="app.js"></script>
+</body>
+</html>
