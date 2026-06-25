@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+// قمنا باستيراد initializeFirestore بدلاً من getFirestore
+import { initializeFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBzHA2Gc0olnCli51uyoMTMYyHavQMWCM4",
@@ -12,7 +13,13 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+
+// إجبار قواعد البيانات على استخدام Long Polling لتخطي حظر الـ WebSockets
+const db = initializeFirestore(app, {
+    experimentalForceLongPolling: true,
+});
+
+// الآن يمكنك استخدام المتغير db بشكل طبيعي جداً مع addDoc أو غيرها من الدوالي
 
 // عناصر النموذج والصفحة
 const form = document.getElementById("bookingForm");
